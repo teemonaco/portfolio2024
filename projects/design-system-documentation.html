@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Design System Documentation</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <div id="side-nav-container"></div>
+
+    <header class="bg-dark text-white p-4 text-center">
+        <h1>Custom Design System Documentation</h1>
+        <p>A comprehensive guide to the design system I built to enhance consistency and efficiency</p>
+    </header>
+
+    <main class="container mt-5">
+        <!-- Introduction Section -->
+        <section class="mb-5">
+            <h2>Introduction</h2>
+            <p>The custom design system was developed to create a unified visual language across all products and interfaces. It ensures consistency in design, increases efficiency in development, and improves the user experience across platforms.</p>
+        </section>
+
+        <!-- Components Section -->
+        <section class="mb-5">
+            <h2>Core Components</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Typography</h4>
+                    <p>The design system includes a robust typography guide with predefined font sizes, weights, and line heights for headings, body text, and captions. Each style was selected for readability and scalability across devices.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Color Palette</h4>
+                    <p>A consistent color palette ensures accessibility and brand alignment. Primary, secondary, and accent colors are defined, along with their use cases across UI elements and states (e.g., hover, active).</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Grid System</h4>
+                    <p>A responsive grid system was established to maintain alignment and spacing across layouts. This system supports both fixed and fluid designs, ensuring flexibility for different screen sizes.</p>
+                </div>
+            </div>
+            <img src="/images/design-system-components.png" alt="Design System Components" class="img-fluid my-4">
+        </section>
+
+        <!-- UI Components Section -->
+        <section class="mb-5">
+            <h2>UI Components</h2>
+            <p>The design system includes a comprehensive library of UI components that can be reused across different projects. Each component is built with accessibility in mind and follows best practices for usability.</p>
+            <ul>
+                <li>Buttons: Primary, Secondary, Tertiary</li>
+                <li>Form Elements: Input fields, dropdowns, checkboxes, and radio buttons</li>
+                <li>Navigation: Headers, footers, sidebars</li>
+                <li>Modals and Dialogs: Predefined styles for pop-ups and alerts</li>
+            </ul>
+            <img src="/images/design-system-ui-components.png" alt="UI Components" class="img-fluid my-4">
+        </section>
+
+        <!-- Tokens and Variables Section -->
+        <section class="mb-5">
+            <h2>Design Tokens and Variables</h2>
+            <p>The system uses design tokens for spacing, typography, and color to maintain consistency across projects. Variables are defined in the codebase, allowing developers to easily update and manage design elements without manually adjusting styles.</p>
+        </section>
+
+        <!-- Implementation Section -->
+        <section class="mb-5">
+            <h2>Implementation and Usage</h2>
+            <p>The design system is implemented using a combination of SCSS and JavaScript, making it easy to integrate into existing and new projects. Detailed documentation and code snippets are provided for developers to quickly adopt the system.</p>
+            <img src="/images/design-system-implementation.png" alt="Design System Implementation" class="img-fluid my-4">
+        </section>
+
+        <!-- Next Steps Section -->
+        <section class="text-center">
+            <a href="checkout-redesign.html" class="btn btn-primary">View Checkout Redesign Case Study</a>
+        </section>
+    </main>
+ <!-- Bootstrap JS and dependencies -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Custom JS -->
+ <script src="/scripts/script.js"></script>
+ <script>
+    fetch('/assets/side-nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('side-nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading side navigation:', error));
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Design Case Study</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <div id="side-nav-container"></div>
+    
+    <header class="bg-dark text-white p-4 text-center">
+        <h1>Mobile App Design Case Study</h1>
+        <p>Exploring the process behind the design of a user-friendly mobile app</p>
+    </header>
+
+    <main class="container mt-5">
+        <!-- Overview Section -->
+        <section class="mb-5">
+            <h2>Overview</h2>
+            <p>This mobile app was designed to provide users with a seamless and intuitive experience for managing their daily tasks. The app focused on a clean interface, simple navigation, and responsive interactions to ensure users could achieve their goals effortlessly.</p>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="mb-5">
+            <h2>The Problem</h2>
+            <p>The existing app faced challenges with complex navigation and inconsistent UI elements, leading to user frustration. The goal was to redesign the app to enhance usability, improve aesthetics, and streamline the overall experience.</p>
+        </section>
+
+        <!-- Process Section -->
+        <section class="mb-5">
+            <h2>Process</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>User Research</h4>
+                    <p>We conducted interviews and usability tests to gather feedback on pain points and identify areas for improvement. This research informed the wireframing and design phases.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Wireframing & Prototyping</h4>
+                    <p>Low-fidelity wireframes were created to map out the new user flow, which was then transformed into interactive prototypes for user testing. The feedback from these tests guided further refinements.</p>
+                </div>
+            </div>
+            <img src="/images/mobile-app-wireframes.png" alt="Mobile App Wireframes" class="img-fluid my-4">
+        </section>
+
+        <!-- Solution Section -->
+        <section class="mb-5">
+            <h2>The Solution</h2>
+            <p>The final design featured a simplified navigation structure, consistent UI components, and a focus on accessibility. The app was designed with a mobile-first approach, ensuring it performed well on all devices.</p>
+            <img src="/images/mobile-app-solution.png" alt="Mobile App Solution" class="img-fluid my-4">
+        </section>
+
+        <!-- Outcome Section -->
+        <section class="mb-5">
+            <h2>Outcome</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Metrics</h4>
+                    <ul>
+                        <li>20% increase in user retention</li>
+                        <li>40% reduction in navigation-related user errors</li>
+                        <li>Positive feedback on overall usability and design consistency</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>User Feedback</h4>
+                    <p>"The app is much easier to use now. I can find what I need quickly and it looks great on my phone!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Case Study Section -->
+        <section class="text-center">
+            <a href="/checkout-redesign.html" class="btn btn-primary">View Next Case Study</a>
+        </section>
+    </main>
+
+   <!-- Bootstrap JS and dependencies -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- Custom JS -->
+   <script src="/scripts/script.js"></script>
+   <!-- JavaScript to Load Side Navigation -->
+   <script>
+    fetch('/assets/side-nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('side-nav-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading side navigation:', error));
+</script>
+</body>
+
+</html>

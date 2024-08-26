@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Redesign Case Study</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <div id="side-nav-container"></div>
+
+    <header class="bg-dark text-white p-4 text-center">
+        <h1>Checkout Redesign Case Study</h1>
+        <p>A deep dive into how we improved user experience and increased conversion rates</p>
+    </header>
+
+    <main class="container mt-5">
+        <!-- Overview Section -->
+        <section class="mb-5">
+            <h2>Overview</h2>
+            <p>The checkout redesign was initiated to address a declining conversion rate and poor user experience in the final steps of the purchasing process. Our goal was to streamline the checkout process, reduce friction, and ultimately increase conversions.</p>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="mb-5">
+            <h2>The Problem</h2>
+            <p>Users were experiencing significant friction during the checkout process due to a cluttered interface, confusing input fields, and lack of mobile responsiveness. This resulted in a higher-than-average cart abandonment rate.</p>
+        </section>
+
+        <!-- Process Section -->
+        <section class="mb-5">
+            <h2>Process</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Research & Discovery</h4>
+                    <p>We conducted user interviews, analyzed heatmaps, and reviewed customer feedback to understand pain points. The data showed that users were dropping off at specific steps in the checkout process.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Wireframing & Prototyping</h4>
+                    <p>Based on our research, we created low-fidelity wireframes to simplify the checkout process. After several rounds of iteration, we developed high-fidelity prototypes for user testing.</p>
+                </div>
+            </div>
+            <img src="/images/checkout-redesign-wireframes.png" alt="Checkout Redesign Wireframes" class="img-fluid my-4">
+        </section>
+
+        <!-- Solution Section -->
+        <section class="mb-5">
+            <h2>The Solution</h2>
+            <p>We implemented a streamlined checkout process with fewer steps, clearer input fields, and a mobile-first design. The new design reduced cognitive load by minimizing distractions and highlighting key actions.</p>
+            <img src="/images/checkout-redesign-solution.png" alt="Checkout Redesign Solution" class="img-fluid my-4">
+        </section>
+
+        <!-- Outcome Section -->
+        <section class="mb-5">
+            <h2>Outcome</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Metrics</h4>
+                    <ul>
+                        <li>15% increase in conversion rates</li>
+                        <li>25% reduction in cart abandonment</li>
+                        <li>30% increase in mobile checkout completions</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>User Feedback</h4>
+                    <p>"The new checkout process is so much easier to use, especially on mobile!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Case Study Section -->
+        <section class="text-center">
+            <a href="images/another-case-study.html" class="btn btn-primary">View Next Case Study</a>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/scripts/script.js"></script>
+    <script>
+        fetch('/side-nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('side-nav-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading side navigation:', error));
+        </script>
+    </body>
+</body>
+
+
+</html>
