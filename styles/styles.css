@@ -373,6 +373,7 @@ text-decoration: none!important;
 /* Align logo and nav at the top */
 #sideNav .logo img {
     max-width: 100px;
+    min-width: 80px;
     height: auto;
     width: 100%;
     padding: 10px;
