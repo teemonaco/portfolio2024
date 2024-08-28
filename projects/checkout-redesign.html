@@ -89,14 +89,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="/scripts/script.js"></script>
+
     <script>
-        fetch('/side-nav.html')
+        fetch('/assets/side-nav.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('side-nav-container').innerHTML = data;
             })
             .catch(error => console.error('Error loading side navigation:', error));
-        </script>
+    </script>
     </body>
 </body>
 
