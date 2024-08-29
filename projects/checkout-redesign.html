@@ -13,7 +13,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="/assets/styles/styles.css">
 </head>
 
 <body>
@@ -50,14 +50,14 @@
                     <p>Based on our research, we created low-fidelity wireframes to simplify the checkout process. After several rounds of iteration, we developed high-fidelity prototypes for user testing.</p>
                 </div>
             </div>
-            <img src="../images/checkout-redesign-wireframes.png" alt="Checkout Redesign Wireframes" class="img-fluid my-4">
+            <img src="/assets/images/checkout-redesign-wireframes.png" alt="Checkout Redesign Wireframes" class="img-fluid my-4">
         </section>
 
         <!-- Solution Section -->
         <section class="mb-5">
             <h2>The Solution</h2>
             <p>We implemented a streamlined checkout process with fewer steps, clearer input fields, and a mobile-first design. The new design reduced cognitive load by minimizing distractions and highlighting key actions.</p>
-            <img src="../images/checkout-redesign-solution.png" alt="Checkout Redesign Solution" class="img-fluid my-4">
+            <img src="/assets/images/checkout-redesign-solution.png" alt="Checkout Redesign Solution" class="img-fluid my-4">
         </section>
 
         <!-- Outcome Section -->
@@ -81,25 +81,23 @@
 
         <!-- Next Case Study Section -->
         <section class="text-center">
-            <a href="porjects/another-case-study.html" class="btn btn-primary">View Next Case Study</a>
+            <a href="/assets/projects/another-case-study.html" class="btn btn-primary">View Next Case Study</a>
         </section>
     </main>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-<script src="../scripts/script.js"></script>
+    <script src="/assets/scripts/script.js"></script>
 
     <script>
-        fetch('../assets/side-nav.html')
+        fetch('/assets/side-nav.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('side-nav-container').innerHTML = data;
             })
             .catch(error => console.error('Error loading side navigation:', error));
     </script>
-    </body>
 </body>
-
 
 </html>
