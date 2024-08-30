@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Design Case Study</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
 <header class="bg-dark text-white p-4 text-center">
     <h1>Mobile App Design Case Study</h1>
     <p>Empowering users to access real-time data and insights on the go</p>
@@ -7,13 +18,19 @@
     <!-- Overview Section -->
     <section class="mb-5">
         <h2>Overview</h2>
-        <p>The Mobile App project was initiated to provide stakeholders and researchers with a tool that allows them to stay informed about industry-related topics in real-time. Our goal was to design a seamless, intuitive mobile experience that delivers critical information efficiently, even when users are on the move.</p>
+        <p>The rise of digital content has transformed the way companies access and utilize information. In fast-paced industries where real-time insights are critical, the "InfoPro" mobile application was developed to empower stakeholders and researchers to access, save, share, and manage essential industry updates on the go. By streamlining the process of finding reliable information, the app ensures that users can stay ahead of the curve, mitigate risks, and make informed decisions—all from the convenience of their mobile devices.</p>
     </section>
 
     <!-- Problem Section -->
     <section class="mb-5">
         <h2>The Problem</h2>
         <p>Stakeholders and researchers needed a reliable way to access and filter through large volumes of data and industry updates quickly. Existing solutions were cumbersome, with poor mobile interfaces that made it difficult to stay up-to-date while on the go, leading to a significant gap in timely information access.</p>
+        <div class="chart-1">
+            <canvas id="chart1"></canvas>
+        </div>
+        <div class="chart-2">
+            <canvas id="chart2"></canvas>
+        </div>
     </section>
 
     <!-- Process Section -->
@@ -60,6 +77,57 @@
 
 </main>
 
-</body>
+<script>
+    var ctx1 = document.getElementById('chart1').getContext('2d');
+    var chart1 = new Chart(ctx1, {
+        type: 'doughnut',
+        data: {
+            labels: ['Most of it', 'About half of it', 'A small portion of it', 'None of it'],
+            datasets: [{
+                label: 'Perception of Information Reliability',
+                data: [31.4, 49.3, 17.6, 0.6],
+                backgroundColor: ['#4bc0c0', '#ffcd56', '#ff6384', '#36a2eb']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Perception of Information Reliability Online (2018)'
+                }
+            }
+        }
+    });
 
+    var ctx2 = document.getElementById('chart2').getContext('2d');
+    var chart2 = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            labels: ['Time wasted searching', 'Effective search time'],
+            datasets: [{
+                label: 'Time Spent on Information Search',
+                data: [25, 75],
+                backgroundColor: ['#ff6384', '#36a2eb']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Time Wasted Searching for Reliable Information'
+                }
+            }
+        }
+    });
+</script>
+
+</body>
 </html>

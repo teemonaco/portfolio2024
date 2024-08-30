@@ -15,18 +15,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 </head>
 <body>
     <!-- <div id="side-nav-container"></div> -->
     <nav id="sideNav">
         <div class="logo">
-            <img src="images/logo.svg" alt="Teena Monaco Logo">
-            <div class="nav-taglinetext-center text-white">Teena Monaco</div>
+            <a href="index.html" id="logo-link">
+            <img src="images/logo.svg" width="100%"alt="Teena Monaco Logo">
+            </a>
         </div>
         <ul class="nav flex-column">
             <li id="home" class="nav-item">
-                <a class="nav-link text-light" href="/index.htmlindex.html"><img style="width: 28px; margin-right: 10px;" src="images/home.svg"> Home</a>
+                <a id="home-link" class="nav-link text-light" href="/index.html"><img style="width: 28px; margin-right: 10px;" src="images/home.svg"> Home</a>
             </li>
             <li id="redesign-2" class="nav-item">
                 <a class="nav-link text-light" href="projects/checkout-redesign.html"><img style="width: 28px; margin-right: 10px;" src="images/checkout.svg"> Checkout Redesign</a>
@@ -111,11 +114,12 @@
                         </div>
                     </div>
                 </a>
+                
             </div>
             <!-- Additional project cards go here -->
  <!-- About Me Section -->
  <section class="about-me container mt-5" id="about">
-    <div class="row align-items-center">
+    <div class="align-items-center">
         <!-- Image Column -->
         <div class="col-md-4 text-center">
             <img src="images/about-me.png" alt="Teena Monaco" class="img-fluid rounded-circle">
@@ -185,7 +189,6 @@
                 event.preventDefault();
                 loadContent(page);
             });
-
         }
     
         // Add event listeners to project cards and corresponding side navigation items
@@ -200,6 +203,34 @@
         addEventListeners('debug-2', 'projects/debugging-minify-script.html');
         addEventListeners('about-2', 'projects/about.html');
     </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const heroSection = document.getElementById('hero');
+            const mainContent = document.querySelector('main');
+            const dynamicContent = document.getElementById('content');
+    
+            // Function to show the hero section and main content
+            function showHeroAndMain() {
+                heroSection.style.display = 'inline-flex';
+                mainContent.style.display = 'inline-flex';
+                dynamicContent.style.display = 'none';
+            }
+    
+            // Add event listener to the logo
+            document.getElementById('logo-link').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                showHeroAndMain();
+            });
+    
+            // Add event listener to the Home link
+            document.getElementById('home-link').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                showHeroAndMain();
+            });
+        });
+    </script>
+    
     
     
     <script>
